@@ -1,0 +1,9 @@
+# Build directories
+.next
+out
+
+# Dependency directories
+node_modules
+
+# Ignore all CSS files as we're using Tailwind
+*.css
