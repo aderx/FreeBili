@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 import { SearchFormProps } from '@/types';
 
 const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
@@ -14,16 +14,18 @@ const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="search-form flex gap-3 mb-8">
+    <form onSubmit={handleSubmit} className="flex gap-3 mb-8">
       <Input
         type="text"
         value={keyword}
-        onChange={(e) => setKeyword(e.target.value)}
+        onChange={e => setKeyword(e.target.value)}
         placeholder="请输入关键词..."
         required
         className="flex-grow"
       />
-      <Button type="submit">搜索</Button>
+      <Button variant="default" type="submit">
+        搜索
+      </Button>
     </form>
   );
 };

@@ -189,8 +189,6 @@ const Home: React.FC<HomeProps> = ({ siteConfig }) => {
   return (
     <div className="container mx-auto px-4 py-8">
       <Head>
-        <title>{siteConfig.site_name}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <style>{`
           body {
             background-image: url('${backgroundImageUrl}');
@@ -198,9 +196,7 @@ const Home: React.FC<HomeProps> = ({ siteConfig }) => {
         `}</style>
       </Head>
 
-      <div className={isBlurred ? 'blurred-bg' : ''}></div>
-
-      <h1 className="text-3xl font-bold text-center mb-8">{siteConfig.site_name}</h1>
+      {/* <div className={isBlurred ? 'blurred-bg' : ''}></div> */}
 
       <SearchForm onSearch={startSearch} />
 
@@ -277,11 +273,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
     console.error('Failed to fetch site config:', error);
     return {
       props: {
-        siteConfig: {
-          site_name: '自由哔站',
-          pc_background_image_url: 'https://img.qlqqs.com/random',
-          phone_background_image_url: 'https://img.qlqqs.com/random',
-        },
+        siteConfig: {},
       },
     };
   }
