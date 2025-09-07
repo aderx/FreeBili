@@ -87,7 +87,8 @@ const Home: React.FC<HomeProps> = ({ siteConfig }) => {
     setStatusMessage('🔍 正在努力搜索中，请稍候...');
     setIsStatusVisible(true);
 
-    const url = `/search?keyword=${encodeURIComponent(keyword)}`;
+    // 使用新的API路由
+    const url = `/api/search?keyword=${encodeURIComponent(keyword)}`;
     const newEventSource = new EventSource(url);
     setIsBlurred(true);
     setEventSource(newEventSource);
@@ -263,8 +264,8 @@ const Home: React.FC<HomeProps> = ({ siteConfig }) => {
 // 获取站点配置
 export const getServerSideProps: GetServerSideProps = async () => {
   try {
-    // 在服务器端获取配置时使用PC背景图片URL
-    const response = await fetch('http://localhost:8000/config');
+    // 使用新的API路由获取配置
+    const response = await fetch('http://localhost:3001/api/config');
     const siteConfig = await response.json();
 
     return {
