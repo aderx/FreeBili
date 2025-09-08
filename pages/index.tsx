@@ -188,13 +188,13 @@ const Home: React.FC<HomeProps> = ({ siteConfig }) => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <Head>
+      {/* <Head>
         <style>{`
           body {
             background-image: url('${backgroundImageUrl}');
           }
         `}</style>
-      </Head>
+      </Head> */}
 
       {/* <div className={isBlurred ? 'blurred-bg' : ''}></div> */}
 

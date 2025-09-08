@@ -83,6 +83,14 @@
     {
       "name": "小猫咪资源",
       "base_url": "https://zy.xmm.hk/api.php/provide/vod"
+    },
+    {
+      "name": "索尼资源",
+      "base_url": "https://suoniapi.com/api.php/provide/vod"
+    },
+    {
+      "name": "量子资源",
+      "base_url": "http://cj.lziapi.com/api.php/provide/vod"
     }
   ]
 }
